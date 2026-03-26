@@ -1,8 +1,89 @@
-import React from 'react'
+
+import React from "react";
+import { FaBookOpen, FaCode, FaGraduationCap, FaLaptopCode, FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import ResumeCard from "./ResumeCard";
 
 const Resume = () => {
+
+  // Data For My Works
+  const resumeData = [
+    {
+      id: 1,
+      Icon: FaLaptopCode,
+      role: "Frontend Developer",
+      description:
+        "Builds responsive and user-friendly web interfaces with a focus on performance and clean design.",
+    },
+    {
+      id: 2,
+      Icon: FaReact,
+      role: "React & Next.js Developer",
+      description:
+        "Develops modern web applications using React and Next.js with optimized performance and scalable architecture.",
+    },
+    {
+      id: 3,
+      Icon: SiTypescript,
+      role: "TypeScript Developer",
+      description:
+        "Writes type-safe and maintainable code using TypeScript to build scalable and reliable applications.",
+    },
+  ];
+
+  // Data For My Education
+  const resumeEducation = [
+    {
+      id: 1,
+      Icon: FaGraduationCap,
+      role:
+        "Bachelor’s Degree in Management Information Systems – High British Institute (IPI), Mansoura",
+      date: "2020 - 2022",
+    },
+    {
+      id: 2,
+      Icon: FaCode,
+      role:
+        "Frontend Development Track – Specialized in React, Next.js, and modern web technologies",
+      date: "Jan 2023 - Dec 2023",
+    },
+    {
+      id: 3,
+      Icon: FaBookOpen,
+      role:
+        "Continuous Self-Learning – Focused on TypeScript, React Query, and scalable frontend architecture",
+      date: "2024 - Present",
+    },
+  ];
+
   return (
-    <div className=''>Resume</div>
-  )
-}
+    <div className="pt-16 pb-12 sm:pt-20 sm:pb-16">
+      <div className="w-[90%] sm:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-16">
+
+        {/* Work Section */}
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-10">
+            My Work <span className="text-cyan-200">Experience</span>
+          </h1>
+
+          {resumeData.map((resume) => (
+            <ResumeCard key={resume.id} {...resume} />
+          ))}
+        </div>
+
+        {/* Education Section */}
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-10">
+            My <span className="text-cyan-200">Education</span>
+          </h1>
+
+          {resumeEducation.map((education) => (
+            <ResumeCard key={education.id} {...education} />
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+};
 export default Resume;

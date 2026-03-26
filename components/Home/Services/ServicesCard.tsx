@@ -10,7 +10,7 @@ type Props = {
 
 const ServicesCard = ({ description, icon, name }: Props) => {
   return (
-    <div className="p-6 bg-[#111] rounded-xl hover:bg-[#1a1a1a] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="p-6 bg-blue-950/20  rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       
       <Image
         src={icon}
@@ -30,5 +30,4 @@ const ServicesCard = ({ description, icon, name }: Props) => {
     </div>
   );
 };
-
 export default ServicesCard;
