@@ -36,7 +36,7 @@ const Services = () => {
         Collaborate with brand<br /> and agencies to create <br /> impactful results
       </h1>
 
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12 md:mt-16">
+      <div data-aos='fade-right' data-aos-anchor-placement='top-center' className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12 md:mt-16">
         {services.map((service, i) => (
           <ServicesCard key={i} {...service} />
         ))}

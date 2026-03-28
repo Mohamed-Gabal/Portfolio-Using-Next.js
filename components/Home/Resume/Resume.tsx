@@ -58,7 +58,7 @@ const Resume = () => {
 
   return (
     <div className="pt-16 pb-12 sm:pt-20 sm:pb-16">
-      <div className="w-[90%] sm:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-16">
+      <div data-aos='zoom-out' data-aos-anchor-placement='top-center' data-aos-delay='300' className="w-[90%] sm:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-16">
 
         {/* Work Section */}
         <div>

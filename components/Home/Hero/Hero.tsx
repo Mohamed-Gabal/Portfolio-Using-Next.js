@@ -18,16 +18,17 @@ const Hero = () => {
         width={100}
         height={100}
         className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-8 border-[#0c0c48aa]"
+        data-aos='fade-up'
       />
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 font-bold tracking-wide">
+      <h1 data-aos='fade-up' data-aos-delay='200' className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 font-bold tracking-wide">
         Creating web products,
         <span className="text-cyan-300 block">
           brands, and experiences.
         </span>
       </h1>
 
-      <h2 className="mt-5 text-base sm:text-lg md:text-xl font-medium flex flex-wrap justify-center">
+      <h2 data-aos='fade-up' data-aos-delay='400' className="mt-5 text-base sm:text-lg md:text-xl font-medium flex flex-wrap justify-center">
         Hi! I'm Mohamed Ali - A passionate
         <span className="text-cyan-300 font-bold pl-2">
           <Typewriter
@@ -44,7 +45,7 @@ const Hero = () => {
         </span>
       </h2>
 
-      <button className="mt-6 px-8 py-3 sm:px-10 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <button data-aos='fade-up' data-aos-delay='600' className="mt-6 px-8 py-3 sm:px-10 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
         See my work
         <BsArrowRight className="w-5 h-5" />
       </button>

@@ -21,7 +21,7 @@ const Projects = () => {
       <div className='w-[90%] sm:w-[80%] md:w-[70%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-16'>
         {dataImage.map((item) => (
           <div key={item.id} className='group'>
-            <div className='relative w-full h-64 sm:h-72 md:h-80 rounded-lg overflow-hidden'>
+            <div data-aos='fade-up' data-aos-anchor-placement='top-center' data-aos-delay='0' className='relative w-full h-64 sm:h-72 md:h-80 rounded-lg overflow-hidden'>
               <Image
                 src={item.image}
                 alt={item.title}

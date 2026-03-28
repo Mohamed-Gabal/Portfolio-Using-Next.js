@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ResponsiveNavbar from "@/components/Home/Navbar/ResponsiveNavbar";
+import ScrollTop from "@/components/Helper/ScrollTop";
 
 const font = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -21,11 +22,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`$e{font.className} antialiased bg-[#0d0d1f]`} 
+      className={`${font.className} antialiased bg-[#0d0d1f]`} 
     >
       <body className="min-h-full flex flex-col">
         <ResponsiveNavbar />
         {children}
+        <ScrollTop />
         </body>
     </html>
   );
