@@ -37,8 +37,9 @@ const Resume = () => {
       id: 1,
       Icon: FaGraduationCap,
       role:
-        "Bachelor’s Degree in Management Information Systems – High British Institute (IPI), Mansoura",
+        "Diploma Degree in Management Information Systems – High British Institute (IPI), Mansoura",
       date: "2020 - 2022",
+      description: '',
     },
     {
       id: 2,
@@ -46,6 +47,7 @@ const Resume = () => {
       role:
         "Frontend Development Track – Specialized in React, Next.js, and modern web technologies",
       date: "Jan 2023 - Dec 2023",
+      description: '',
     },
     {
       id: 3,
@@ -53,6 +55,7 @@ const Resume = () => {
       role:
         "Continuous Self-Learning – Focused on TypeScript, React Query, and scalable frontend architecture",
       date: "2024 - Present",
+      description: '',
     },
   ];
 
