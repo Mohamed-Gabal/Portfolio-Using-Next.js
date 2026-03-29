@@ -68,10 +68,16 @@ const Resume = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-10">
             My Work <span className="text-cyan-200">Experience</span>
           </h1>
-
+          
           {resumeData.map((resume) => (
-            <ResumeCard key={resume.id} {...resume} />
-          ))}
+            <ResumeCard
+            key={resume.id}
+            Icon={resume.Icon}
+            role={resume.role}
+            description={resume.description}
+            date={resume.date} // ممكن يكون undefined
+            />
+            ))}
         </div>
 
         {/* Education Section */}
@@ -79,10 +85,16 @@ const Resume = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-10">
             My <span className="text-cyan-200">Education</span>
           </h1>
-
+          
           {resumeEducation.map((education) => (
-            <ResumeCard key={education.id} {...education} />
-          ))}
+            <ResumeCard
+            key={education.id}
+            Icon={education.Icon}
+            role={education.role}
+            date={education.date}
+            description={education.description}
+            />
+            ))}
         </div>
 
       </div>
