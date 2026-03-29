@@ -14,6 +14,7 @@ const Resume = () => {
       role: "Frontend Developer",
       description:
         "Builds responsive and user-friendly web interfaces with a focus on performance and clean design.",
+        date: '',
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ const Resume = () => {
       role: "React & Next.js Developer",
       description:
         "Develops modern web applications using React and Next.js with optimized performance and scalable architecture.",
+        date: '',
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ const Resume = () => {
       role: "TypeScript Developer",
       description:
         "Writes type-safe and maintainable code using TypeScript to build scalable and reliable applications.",
+        date: '',
     },
   ];
 
