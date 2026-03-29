@@ -6,7 +6,7 @@ import { IconType } from 'react-icons';
 type Props = {
   role: string;
   Icon: IconType;
-  description: string;
+  description?: string;
   date?: string;
 }
 
