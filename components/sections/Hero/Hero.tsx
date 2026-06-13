@@ -1,0 +1,70 @@
+"use client";
+
+import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
+import dynamic from "next/dynamic";
+import { SECTION_IDS } from "@/lib/constants";
+
+const Typewriter = dynamic(() => import("typewriter-effect"), {
+  ssr: false,
+});
+
+const Hero = () => {
+  return (
+    <section
+      id={SECTION_IDS.home}
+      className="relative min-h-[100svh] flex flex-col items-center justify-center text-white text-center px-4"
+    >
+      <Image
+        src="/images/photo.jpeg"
+        alt="Mohamed Ali - Frontend Developer"
+        width={100}
+        height={100}
+        priority
+        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-8 border-[#0c0c48aa]"
+        data-aos="fade-up"
+      />
+
+      <h1
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 font-bold tracking-wide"
+      >
+        Creating web products,
+        <span className="text-cyan-300 block">brands, and experiences.</span>
+      </h1>
+
+      <h2
+        data-aos="fade-up"
+        data-aos-delay="400"
+        className="mt-5 text-base sm:text-lg md:text-xl font-medium flex flex-wrap justify-center"
+      >
+        Hi! I&apos;m Mohamed Ali - A passionate
+        <span className="text-cyan-300 font-bold pl-2">
+          <Typewriter
+            options={{
+              strings: [
+                "Frontend Developer",
+                "React, Next.js, TypeScript",
+                "Web Developer",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </span>
+      </h2>
+
+      
+       <a href="#projects"
+        data-aos="fade-up"
+        data-aos-delay="600"
+        className="mt-6 px-8 py-3 sm:px-10 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        See my work
+        <BsArrowRight className="w-5 h-5" />
+      </a>
+    </section>
+  );
+};
+export default Hero;
