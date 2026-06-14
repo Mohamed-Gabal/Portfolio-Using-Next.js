@@ -2,7 +2,7 @@
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { testimonials } from "@/data/testimonials";
+import { projects } from "@/data/projects";
 import { SECTION_IDS } from "@/lib/constants";
 import ProjectFeedbackCard from "./ProjectFeedbackCard";
 
@@ -19,8 +19,8 @@ const ProjectFeedback = () => {
       className="pt-16 pb-16 bg-gray-900"
     >
       <h2 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
-        Professional Impact & <br />
-        <span className="text-cyan-200">Project Feedback</span>
+        Project Highlights & <br />
+        <span className="text-cyan-200">Key Features</span>
       </h2>
 
       <div className="mt-16 w-[90%] md:w-[85%] mx-auto">
@@ -31,8 +31,14 @@ const ProjectFeedback = () => {
           autoPlaySpeed={5000}
           arrows
         >
-          {testimonials.map((item) => (
-            <ProjectFeedbackCard key={item.id} {...item} />
+          {projects.map((project) => (
+            <ProjectFeedbackCard
+              key={project.id}
+              image={project.images[0]}
+              title={project.title}
+              highlights={project.highlights}
+              liveUrl={project.liveUrl}
+            />
           ))}
         </Carousel>
       </div>

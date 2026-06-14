@@ -4,13 +4,10 @@ import ServicesCard from "./ServicesCard";
 
 const Services = () => {
   return (
-    <section id={SECTION_IDS.services} className="pt-16 pb-16">
+    <section id={SECTION_IDS.services} className="pb-16">
       <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto leading-snug">
-        Collaborate with brands
-        <br /> and agencies to create
-        <br /> impactful results
+        Crafting scalable web applications with clean code and exceptional user experiences.
       </h2>
-
       <div
         data-aos="fade-right"
         data-aos-anchor-placement="top-center"

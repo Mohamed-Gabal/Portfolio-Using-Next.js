@@ -8,8 +8,9 @@ export const siteConfig = {
   email: "abogabal672@gmail.com",
   phone: "01001034941",
   location: "Egypt, Mansoura",
-  resumeUrl: "/files/Mohamed-Ali-CV.pdf",
+  resumeUrl: "/files/mohamed-ali.pdf",
   social: {
+    whatsapp: "https://wa.me/0201001034941",
     facebook: "https://www.facebook.com/share/1AshzEf4u7/",
     youtube: "https://youtube.com/@pixel.code3?si=6wqAOJszjEXDiuj9",
     instagram:

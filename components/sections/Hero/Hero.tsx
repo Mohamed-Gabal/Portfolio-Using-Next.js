@@ -59,7 +59,7 @@ const Hero = () => {
        <a href="#projects"
         data-aos="fade-up"
         data-aos-delay="600"
-        className="mt-6 px-8 py-3 sm:px-10 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="mt-10 px-8 py-3 sm:px-10 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       >
         See my work
         <BsArrowRight className="w-5 h-5" />

@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
-import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+
 import { siteConfig } from "@/config/site.config";
 import { SECTION_IDS } from "@/lib/constants";
 
@@ -102,6 +103,15 @@ const Contact = () => {
           {/* Social Media */}
           <div className="flex items-center mt-8 space-x-3">
             <Link
+              href={siteConfig.social.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Whatsapp"
+              className="w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-600 transition-all duration-300"
+            >
+              <FaWhatsapp className="text-white w-6 h-6" />
+            </Link>
+            <Link
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
@@ -124,7 +134,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-800 transition-all duration-300"
+              className="w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-pink-600 transition-all duration-300"
             >
               <FaInstagram className="text-white w-6 h-6" />
             </Link>
@@ -133,7 +143,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-800 transition-all duration-300"
+              className="w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-black transition-all duration-300"
             >
               <FaGithub className="text-white w-6 h-6" />
             </Link>
