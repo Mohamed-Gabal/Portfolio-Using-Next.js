@@ -1,15 +1,16 @@
 export const siteConfig = {
   name: "Mohamed Ali",
-  brand: "Gabal",
+  brand: "Mohamed",
   title: "Gabal Portfolio | Frontend Developer (React, Next.js, TypeScript)",
   description:
     "Portfolio of Mohamed Ali (Gabal) — Frontend Developer specialized in React, Next.js, TypeScript and scalable web applications.",
-  url: "https://gabal-portfolio.vercel.app",
+  url: "https://mohamed-cv.vercel.app",
   email: "abogabal672@gmail.com",
-  phone: "01001034941",
+  phone: "+201001034941",
   location: "Egypt, Mansoura",
-  resumeUrl: "/files/mohamed-ali.pdf",
+  resumeUrl: "/files/mohamed-cv.pdf",
   social: {
+    linkedIn: "https://www.linkedin.com/in/mohamed-ali-b9a61140b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     whatsapp: "https://wa.me/0201001034941",
     facebook: "https://www.facebook.com/share/1AshzEf4u7/",
     youtube: "https://youtube.com/@pixel.code3?si=6wqAOJszjEXDiuj9",
