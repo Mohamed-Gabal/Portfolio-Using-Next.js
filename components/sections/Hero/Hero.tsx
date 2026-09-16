@@ -5,12 +5,12 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { BsChevronDown } from "react-icons/bs";
 import { siteConfig } from "@/config/site.config";
+import Container from "@/components/layout/container";
 
 const HeroPage = () => {
   return (
-    <section className="relative min-h-[calc(100svh-10vh)] overflow-hidden">
-      <div className="w-full max-w-[1470px] mx-auto px-6 sm:px-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-10">
+    <div className="relative min-h-[100svh] overflow-hidden flex items-center">
+        <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-30">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -167,10 +167,10 @@ const HeroPage = () => {
             {/*  Profile Image */}
             <motion.div
               animate={{
-                y: [0, -12, 0, 12, 0],
+                y: [-20, 20, -20],
               }}
               transition={{
-                duration: 50,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -185,9 +185,8 @@ const HeroPage = () => {
               />
             </motion.div>
           </motion.div>
-        </div>
-      </div>
-    </section>
+        </Container>
+    </div>
   );
 };
 

@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { technologies } from "@/data/skills";
+import Container from "@/components/layout/container";
 
 const TechMarquee = () => {
+  const marqueeItems = [
+    ...technologies,
+    ...technologies,
+    ...technologies,
+    ...technologies,
+  ];
   return (
-    <section className="relative overflow-hidden py-5 bg-white/5">
+    <Container className="relative overflow-hidden py-5 bg-white/5">
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-        {[...technologies, ...technologies, ...technologies, ...technologies].map((tech, index) => (
+        {marqueeItems.map((tech, index) => (
           <Link
             key={`${tech.name}-${index}`}
             href={tech.docsUrl}
@@ -18,7 +25,7 @@ const TechMarquee = () => {
           </Link>
         ))}
       </div>
-    </section>
+    </Container>
   );
 };
 

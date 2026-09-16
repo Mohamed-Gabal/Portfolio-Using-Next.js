@@ -1,15 +1,17 @@
+import { ReactNode } from "react";
+
 type Props = {
-  children: React.ReactNode;
-  className?: string;
+  icon?: string;
+  children: ReactNode;
 };
 
-const Badge = ({ children, className = "" }: Props) => {
+const Badge = ({ icon, children }: Props) => {
   return (
-    <span
-      className={`px-4 py-1.5 bg-blue-950 text-white text-sm sm:text-base font-bold rounded-full ${className}`}
-    >
+    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-600 text-sm font-medium">
+      {icon && <span>{icon}</span>}
       {children}
     </span>
   );
 };
+
 export default Badge;

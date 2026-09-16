@@ -71,6 +71,7 @@ export type Service = {
   icon: string;
   name: string;
   description: string;
+  tags: string[];
 };
 
 export type Project = {

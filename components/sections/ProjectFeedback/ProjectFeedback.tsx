@@ -3,7 +3,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { projects } from "@/data/projects";
-import { SECTION_IDS } from "@/lib/constants";
 import ProjectFeedbackCard from "./ProjectFeedbackCard";
 
 const responsive = {
@@ -15,7 +14,6 @@ const responsive = {
 const ProjectFeedback = () => {
   return (
     <section
-      id={SECTION_IDS.testimonials}
       className="pt-16 pb-16 bg-gray-900"
     >
       <h2 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">

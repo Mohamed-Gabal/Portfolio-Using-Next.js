@@ -1,10 +1,10 @@
 import { workExperience, education } from "@/data/resume";
-import { SECTION_IDS } from "@/lib/constants";
+
 import ResumeCard from "./ResumeCard";
 
 const Resume = () => {
   return (
-    <section id={SECTION_IDS.resume} className="pt-16 pb-12 sm:pt-20 sm:pb-16">
+    <section className="pt-16 pb-12 sm:pt-20 sm:pb-16">
       <div
         data-aos="zoom-out"
         data-aos-anchor-placement="top-center"

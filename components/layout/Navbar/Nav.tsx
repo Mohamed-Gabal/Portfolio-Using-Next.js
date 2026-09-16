@@ -5,8 +5,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 const Nav = () => {
   return (
-    <header className="relative z-[100] h-[10vh] bg-[#0f142ed9] backdrop-blur-md shadow-md">
-      <div className="w-full h-full px-6 sm:px-10 flex items-center justify-between">
+    <header className="fixed top-0 right-0 left-0 z-[100] h-[10vh] bg-[#0f142ed9] backdrop-blur-md shadow-md">
+      <div className="w-full h-full px-6 sm:px-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="#home" className="flex items-center gap-2">
           <FaCode className="w-6 h-6 text-blue-500" />

@@ -3,11 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { projects } from "@/data/projects";
-import { SECTION_IDS } from "@/lib/constants";
 
 const Projects = () => {
   return (
-    <section id={SECTION_IDS.projects} className="pt-16 pb-16">
+    <section className="pt-16 pb-16">
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-white">
         A small selection of recent <br />
         <span className="text-cyan-200">Projects</span>
