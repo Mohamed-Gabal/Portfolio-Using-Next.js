@@ -14,9 +14,9 @@ const Blog = () => {
         data-aos-delay="300"
         className="w-[90%] xl:w-[70%] mx-auto grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-4 items-start mt-16"
       >
-        {blogPosts.map((post) => (
+        {/* {blogPosts.map((post) => (
           <BlogCard key={post.id} {...post} />
-        ))}
+        ))} */}
       </div>
     </section>
   );
