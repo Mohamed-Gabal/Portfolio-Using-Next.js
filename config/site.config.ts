@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Mohamed Ali",
   brand: "Mohamed",
-  title: "Gabal Portfolio | Frontend Developer (React, Next.js, TypeScript)",
+  title: "Mohamed Ali Frontend Developer Portfolio (React, Next.js, TypeScript)",
   description:
     "Portfolio of Mohamed Ali (Gabal) — Frontend Developer specialized in React, Next.js, TypeScript and scalable web applications.",
   url: "https://mohamed-cv.vercel.app",

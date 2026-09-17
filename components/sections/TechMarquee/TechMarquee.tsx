@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { technologies } from "@/data/skills";
+import { technologies } from "@/data/techMarquee";
 import Container from "@/components/layout/container";
 
 const TechMarquee = () => {

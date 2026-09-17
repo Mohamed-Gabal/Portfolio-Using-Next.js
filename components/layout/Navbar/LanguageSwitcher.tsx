@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
         onClick={() => setLang("en")}
         className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
           lang === "en"
-            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+            ? "bg-gradient-to-r from-blue-600 to-cyan-300 text-white"
             : "text-white/60"
         }`}
       >
@@ -25,7 +25,7 @@ const LanguageSwitcher = () => {
         onClick={() => setLang("ar")}
         className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
           lang === "ar"
-            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+            ? "bg-gradient-to-r from-blue-600 to-cyan-300 text-white"
             : "text-white/60"
         }`}
       >
