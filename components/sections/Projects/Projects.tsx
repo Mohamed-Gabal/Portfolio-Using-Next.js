@@ -1,62 +1,100 @@
+"use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
-import { projects } from "@/data/projects";
+import { useState } from "react";
+
+import Badge from "@/components/ui/Badge";
+import Container from "@/components/layout/container";
+import ProjectsFilter from "./ProjectsFilter";
+import ProjectCard from "./ProjectsCard";
+import ProjectsPagination from "./ProjectsPagination";
+
+import { ProjectFilter, projects } from "@/data/projects";
 
 const Projects = () => {
+  const [activeFilter, setActiveFilter] =
+    useState<ProjectFilter>("All Projects");
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const projectsPerPage = 6;
+
+  // Filter Projects
+  const filterProjects = projects.filter((project) => {
+    if (activeFilter === "All Projects") {
+      return true;
+    }
+
+    if (activeFilter === "Dashboards") {
+      return project.category === "Dashboards";
+    }
+
+    if (activeFilter === "Ecommerce") {
+      return project.ecommerce === true;
+    }
+
+    if (activeFilter === "Featured") {
+      return project.featured === true;
+    }
+
+    return true;
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(filterProjects.length / projectsPerPage);
+
+  const startIndex = (currentPage - 1) * projectsPerPage;
+
+  const paginatedProjects = filterProjects.slice(
+    startIndex,
+    startIndex + projectsPerPage,
+  );
+
   return (
     <section className="pt-16 pb-16">
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-white">
-        A small selection of recent <br />
-        <span className="text-cyan-200">Projects</span>
-      </h2>
+      <Container>
+        <Badge
+          badge="💼 Selected Work"
+          title={
+            <>
+              Recent <span className="text-cyan-300">Projects</span>
+            </>
+          }
+          description="Discover a selection of recent freelance projects, case studies, and modern web applications built using advanced frontend tech."
+        />
 
-      <div className="w-[95%] sm:w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
-        {projects.map((project) => (
-          <Link
-            key={project.id}
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-center"
-            className="group block bg-[#11112b] rounded-2xl p-4 border border-white/5 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1"
-          >
-            {/* 2x2 Screenshot Grid */}
-            <div className="grid grid-cols-2 grid-rows-2 gap-2 rounded-xl overflow-hidden">
-              {project.images.map((src, i) => (
-                <div key={i} className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={src}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-              ))}
-            </div>
+        <ProjectsFilter
+          activeFilter={activeFilter}
+          onFilterChange={(filter) => {
+            setActiveFilter(filter);
+            setCurrentPage(1);
+          }}
+        />
 
-            {/* Title + Subtitle */}
-            <div className="mt-5">
-              <h3 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
-                {project.title}
-              </h3>
-              <p className="pt-2 font-medium text-white/70 text-sm sm:text-base">
-                {project.subtitle}
-              </p>
-            </div>
+        <p className="mt-8 text-center text-sm text-gray-400">
+          Showing{" "}
+          <span className="font-medium text-cyan-300">
+            {filterProjects.length}
+          </span>{" "}
+          of <span className="font-medium text-white">{projects.length}</span>{" "}
+          Projects
+        </p>
 
-            {/* Visible Link */}
-            <div className="mt-4 flex items-center gap-2 text-cyan-300 text-sm sm:text-base font-medium group-hover:underline">
-              <span className="truncate">{project.liveUrl.replace(/^https?:\/\//, "")}</span>
-              <BsArrowUpRight className="w-4 h-4 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </div>
-          </Link>
-        ))}
-      </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {paginatedProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+
+        {totalPages > 1 && (
+          <ProjectsPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        )}
+      </Container>
     </section>
   );
 };
+
 export default Projects;

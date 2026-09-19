@@ -16,7 +16,7 @@ const Home = () => {
       <HeaderSkills />
       <Projects />
       <ProjectFeedback />
-      <Contact />
+       <Contact />
       <Footer />
     </>
   );

@@ -1,11 +1,5 @@
 import { IconType } from "react-icons";
 
-// export type Skill = {
-//   id: number;
-//   name: string;
-//   icon: React.ReactNode;
-// };
-
 export type Service = {
   id: number;
   icon: string;
