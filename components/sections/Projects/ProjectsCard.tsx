@@ -72,30 +72,30 @@ const ProjectCard = ({ project }: Props) => {
       </div>
 
       {/* Project Content */}
-      <div className="p-6">
+      <div className="p-5">
         {/* Title */}
-        <div>
+        <div className="flex items-center justify-between">
           <h3 className="text-xl font-semibold text-white">
             {project.title}
           </h3>
 
-          <p className="mt-2 text-sm text-gray-400">
+          <p className="text-sm text-gray-400">
             {project.company} • {project.date}
           </p>
         </div>
 
         {/* Description */}
-        <p className="mt-5 text-sm leading-7 text-gray-400">
+        <p className="mt-2 text-sm leading-7 text-gray-400">
           {project.description}
         </p>
 
         {/* Highlights */}
-        <div className="mt-5">
+        <div className="mt-2">
           <h4 className="text-sm font-semibold text-white">
             Key Features
           </h4>
 
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-2 space-y-2">
             {project.highlights.slice(0, 3).map((highlight) => (
               <li
                 key={highlight}
@@ -109,7 +109,7 @@ const ProjectCard = ({ project }: Props) => {
         </div>
 
         {/* Technologies */}
-        <div className="mt-6">
+        <div className="mt-2">
           <h4 className="text-sm font-semibold text-white">
             Technologies
           </h4>
