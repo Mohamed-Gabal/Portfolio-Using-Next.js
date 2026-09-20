@@ -191,7 +191,7 @@ export const projects: Project[] = [
 
   {
     id: "5",
-    title: "Corporate Landing Page",
+    title: "Corporate",
     company: "Education LandingPage",
     date: "2023",
     category: "Landing Pages",

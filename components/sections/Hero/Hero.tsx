@@ -70,10 +70,11 @@ const HeroPage = () => {
                 duration: 0.6,
                 delay: 0.55,
               }}
+              className="mt-4 w-full sm:w-auto"
             >
               <Link
                 href="#projects"
-                className="mt-4 px-6 py-3 md:px-8 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
+                className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
               >
                 Explore My Work
                 <BsChevronDown className="w-4 h-4" />
@@ -89,7 +90,7 @@ const HeroPage = () => {
               duration: 0.9,
               ease: "easeOut",
             }}
-            className="relative flex items-center justify-center w-50 h-50 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+            className="relative flex items-center justify-center text-cyan-300 w-50 h-50 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
           >
             {/* Outer Ring */}
             <motion.div
