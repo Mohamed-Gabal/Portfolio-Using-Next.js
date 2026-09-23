@@ -21,7 +21,7 @@ const HeaderSkills = () => {
       ? SkillsData
       : SkillsData.filter((skill) => skill.category === activeCategory);
   return (
-    <section className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
+    <section id="skills" className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
       <Container>
         <Badge
           badge="🛠️ My Technical Toolbox"

@@ -6,7 +6,7 @@ import { careers } from "@/data/career";
 
 const CareerTimeLine = () => {
   return (
-    <section className="pt-16 pb-16">
+    <section id="experience" className="pt-16 pb-16">
       <Container>
         <Badge
           badge="📈 Timeline & Growth"

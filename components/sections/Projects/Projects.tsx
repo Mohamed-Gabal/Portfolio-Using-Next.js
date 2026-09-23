@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 
 const Projects = () => {
   return (
-    <section className="pt-16 pb-16">
+    <section id="projects" className="pt-16 pb-16">
       <Container>
         <Badge
           badge="💼 Selected Work"

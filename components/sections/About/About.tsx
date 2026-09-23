@@ -29,7 +29,7 @@ const tagsData = [
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <Container className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
         {/* Section Header */}
         <Badge

@@ -15,7 +15,7 @@ export const careers: Career[] = [
     id: "1",
     icon: FiBriefcase,
     title: "Frontend Developer Romoz Tech",
-    subtitle: "Freelance Projects",
+    subtitle: "Company Projects",
     date: "2025 - Present",
     description:
       "Worked on modern web applications using React.js, Next.js, and TypeScript. Built responsive interfaces, authentication flows, dashboards, and user-focused frontend features.",
@@ -24,7 +24,7 @@ export const careers: Career[] = [
     id: "2",
     icon: FiCode,
     title: "Frontend Developer - Freelance",
-    subtitle: "Wolf-Challenge",
+    subtitle: "Freelance Project",
     date: "2024 (3 months)",
     description:
       "Developing modern web applications using React.js, Next.js, and TypeScript. Building responsive interfaces and focusing on user experience.",
