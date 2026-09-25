@@ -1,6 +1,7 @@
 import Home from "@/components/Home";
 
-const HomePage = () => {
+const HomePage = async () => {
+
   return (
     <main className="text-white">
       <Home />

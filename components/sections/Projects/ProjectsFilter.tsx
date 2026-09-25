@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ProjectFilter, projectFilters } from "@/data/projects";
 
 type Props = {
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const ProjectsFilter = ({ activeFilter, onFilterChange }: Props) => {
+  const t = useTranslations("Projects");
+
   return (
     <section className="mt-10 flex flex-wrap justify-center gap-3">
       {projectFilters.map((filter) => (
@@ -21,7 +24,7 @@ const ProjectsFilter = ({ activeFilter, onFilterChange }: Props) => {
               : "border-white/10 bg-white/5 text-white hover:border-cyan-300/30 hover:bg-cyan-300/10"
           }`}
         >
-          {filter}
+          {t(`filters.${filter}`)}
         </button>
       ))}
     </section>

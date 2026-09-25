@@ -1,4 +1,6 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+
 import { ContactMethod } from "@/data/contact";
 
 type Props = {
@@ -6,6 +8,8 @@ type Props = {
 };
 
 const ContactCard = ({ methods }: Props) => {
+  const t = useTranslations("Contact");
+
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2">
       {methods.map((method) => {
@@ -34,7 +38,7 @@ const ContactCard = ({ methods }: Props) => {
             </p>
 
             <span className="mt-1 text-xs text-gray-500">
-              {method.description}
+              {t(`methods.${method.description}`)}
             </span>
           </Link>
         );

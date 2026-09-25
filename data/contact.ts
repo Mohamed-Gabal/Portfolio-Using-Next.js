@@ -35,7 +35,7 @@ export const contactMethods: ContactMethod[] = [
     icon: MdOutlineEmail,
     title: "Email",
     value: "abogabal672@gmail.com",
-    description: "Fastest Response",
+    description: "fastestResponse",
     href: "mailto:abogabal672@gmail.com",
     iconColor: "text-blue-400",
     iconBg: "bg-blue-500/10",
@@ -47,7 +47,7 @@ export const contactMethods: ContactMethod[] = [
     icon: FaWhatsapp,
     title: "WhatsApp",
     value: "+201001034941",
-    description: "Instant Chat",
+    description: "instantChat",
     href: "https://wa.me/201001034941",
     iconColor: "text-emerald-400",
     iconBg: "bg-emerald-500/10",
@@ -59,7 +59,7 @@ export const contactMethods: ContactMethod[] = [
     icon: FiLinkedin,
     title: "LinkedIn",
     value: "Mohamed Ali",
-    description: "Professional Network",
+    description: "professionalNetwork",
     href: "https://www.linkedin.com/in/mohamed-ali-b9a61140b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     iconColor: "text-blue-400",
     iconBg: "bg-blue-500/10",
@@ -71,7 +71,7 @@ export const contactMethods: ContactMethod[] = [
     icon: LuGithub,
     title: "GitHub",
     value: "Mohamed-Gabal",
-    description: "View my work",
+    description: "viewMyWork",
     href: "https://github.com/Mohamed-Gabal",
     iconColor: "text-purple-400",
     iconBg: "bg-purple-500/10",
@@ -81,12 +81,31 @@ export const contactMethods: ContactMethod[] = [
 ];
 
 export const contactDetails: ContactDetail[] = [
-  { id: "1", icon: FiClock, title: "Response Time", value: "2-4 Hours" },
-  { id: "2", icon: FiMapPin, title: "Location", value: "Egypt (GMT+3)" },
+  {
+    id: "1",
+    icon: FiClock,
+    title: "responseTime",
+    value: "2-4 Hours",
+  },
+  {
+    id: "2",
+    icon: FiMapPin,
+    title: "location",
+    value: "Egypt (GMT+3)",
+  },
 ];
 
 export const contactStats: ContactStat[] = [
-  { id: "1", label: "20+ Projects" },
-  { id: "2", label: "100% Satisfaction" },
-  { id: "3", label: "2+ Years Exp." },
+  {
+    id: "1",
+    label: "20+ Projects",
+  },
+  {
+    id: "2",
+    label: "100% Satisfaction",
+  },
+  {
+    id: "3",
+    label: "2+ Years Exp.",
+  },
 ];

@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import { Career } from "@/data/career";
 
 type Props = {
@@ -6,6 +8,8 @@ type Props = {
 };
 
 const CareerTimeLineItem = ({ career, index }: Props) => {
+  const t = useTranslations("Experience");
+
   const Icon = career.icon;
 
   const isEven = index % 2 === 0;
@@ -30,17 +34,17 @@ const CareerTimeLineItem = ({ career, index }: Props) => {
             isEven ? "md:justify-end" : ""
           }`}
         >
-          <span>{career.subtitle}</span>
+          <span>{t(`items.${career.id}.subtitle`)}</span>
           <span className="text-gray-600">•</span>
-          <span>{career.date}</span>
+          <span>{t(`items.${career.id}.date`)}</span>
         </div>
 
         <h3 className="mt-2 text-xl font-semibold text-white">
-          {career.title}
+          {t(`items.${career.id}.title`)}
         </h3>
 
         <p className="mt-3 text-sm leading-7 text-gray-400">
-          {career.description}
+          {t(`items.${career.id}.description`)}
         </p>
       </div>
     </div>

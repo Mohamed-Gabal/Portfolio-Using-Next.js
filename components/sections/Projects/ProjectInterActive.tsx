@@ -14,7 +14,7 @@ type Props = {
 
 const ProjectsInteractive = ({ projects }: Props) => {
   const [activeFilter, setActiveFilter] =
-    useState<ProjectFilter>("All Projects");
+    useState<ProjectFilter>("all");
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -22,7 +22,7 @@ const ProjectsInteractive = ({ projects }: Props) => {
 
   // Filter Projects
   const filteredProjects = projects.filter((project) => {
-    if (activeFilter === "All Projects") {
+    if (activeFilter === "all") {
       return true;
     }
 

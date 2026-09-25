@@ -1,3 +1,5 @@
+
+import { useTranslations } from "next-intl";
 import { Skill } from "@/data/skills";
 
 type Props = {
@@ -5,6 +7,8 @@ type Props = {
 };
 
 const SkillCard = ({ skills }: Props) => {
+  const t = useTranslations("Skills");
+
   return (
     <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {skills.map((skill) => {
@@ -28,7 +32,7 @@ const SkillCard = ({ skills }: Props) => {
                 <span
                   className={`mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${skill.color.badge}`}
                 >
-                  {skill.level}
+                  {t(`levels.${skill.level}`)}
                 </span>
               </div>
             </div>

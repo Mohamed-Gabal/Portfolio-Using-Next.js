@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import Badge from "@/components/ui/Badge";
 import Container from "@/components/layout/container";
 import ProjectsInteractive from "./ProjectInterActive";
@@ -5,17 +7,19 @@ import ProjectsInteractive from "./ProjectInterActive";
 import { projects } from "@/data/projects";
 
 const Projects = () => {
+  const t = useTranslations("Projects");
+
   return (
     <section id="projects" className="pt-16 pb-16">
       <Container>
         <Badge
-          badge="💼 Selected Work"
+          badge={t("badge")}
           title={
             <>
-              Recent <span className="text-cyan-300">Projects</span>
+              {t("title")} {" "} <span className="text-cyan-300">{t("titleHighlight")}</span>
             </>
           }
-          description="Discover a selection of recent freelance projects, case studies, and modern web applications built using advanced frontend tech."
+          description={t("description")}
         />
 
         <ProjectsInteractive projects={projects}/>

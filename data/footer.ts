@@ -1,5 +1,10 @@
 import { MdOutlineEmail } from "react-icons/md";
-import { FiLinkedin, FiMapPin, FiPhone, FiMessageCircle } from "react-icons/fi";
+import {
+  FiLinkedin,
+  FiMapPin,
+  FiPhone,
+  FiMessageCircle,
+} from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 import { IconType } from "react-icons";
 
@@ -50,15 +55,47 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const quickLinks: QuickLink[] = [
-  { id: "1", label: "About", href: "#about" },
-  { id: "2", label: "Projects", href: "#projects" },
-  { id: "3", label: "Skills", href: "#skills" },
-  { id: "4", label: "Experience", href: "#experience" },
-  { id: "5", label: "Contact", href: "#contact" },
+  {
+    id: "1",
+    label: "about",
+    href: "#about",
+  },
+  {
+    id: "2",
+    label: "projects",
+    href: "#projects",
+  },
+  {
+    id: "3",
+    label: "skills",
+    href: "#skills",
+  },
+  {
+    id: "4",
+    label: "experience",
+    href: "#experience",
+  },
+  {
+    id: "5",
+    label: "contact",
+    href: "#contact",
+  },
 ];
 
 export const footerContactItems: FooterContactItem[] = [
-  { id: "1", icon: MdOutlineEmail, value: "abogabal672@gmail.com" },
-  { id: "2", icon: FiPhone, value: "+201001034941" },
-  { id: "3", icon: FiMapPin, value: "Egypt (GMT+3)" },
+  {
+    id: "1",
+    icon: MdOutlineEmail,
+    value: "abogabal672@gmail.com",
+  },
+  {
+    id: "2",
+    icon: FiPhone,
+    value: "+201001034941",
+  },
+  {
+    id: "3",
+    icon: FiMapPin,
+    value: "Egypt (GMT+3)",
+  },
 ];

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -8,6 +10,9 @@ import { siteConfig } from "@/config/site.config";
 import Container from "@/components/layout/container";
 
 const HeroPage = () => {
+  const t = useTranslations("Hero");
+
+
   return (
     <div className="relative min-h-[100svh] overflow-hidden flex items-center">
         <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-30">
@@ -21,19 +26,18 @@ const HeroPage = () => {
             }}
             className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
           >
-            <p className="text-lg sm:text-xl">Hi, I,m</p>
+            <p className="text-lg sm:text-xl">{t("greeting")}</p>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wide mt-5">
-              Mohamed Ali
+              {t("name")}
             </h1>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cyan-300 font-extrabold mt-5">
-              Frontend Developer
+              {t("role")}
             </h2>
 
             <p className="text-base sm:text-lg mt-6 leading-relaxed">
-              I craft highly interactive, blazing fast, and stunningly designed
-              web interfaces that elevate brand identities and delight users.
+              {t("description")}
             </p>
 
             {/* Buttons */}
@@ -51,7 +55,7 @@ const HeroPage = () => {
                 target="_blank"
                 className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
               >
-                View My CV
+                {t("viewCv")}
               </Link>
 
               <Link
@@ -59,7 +63,7 @@ const HeroPage = () => {
                 target="_blank"
                 className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
               >
-                LinkedIn Profile
+                {t("linkedin")}
               </Link>
             </motion.div>
 
@@ -76,7 +80,7 @@ const HeroPage = () => {
                 href="#projects"
                 className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
               >
-                Explore My Work
+                {t("exploreWork")}
                 <BsChevronDown className="w-4 h-4" />
               </Link>
             </motion.div>

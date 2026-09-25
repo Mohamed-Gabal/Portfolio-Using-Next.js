@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -12,6 +14,8 @@ type Props = {
 };
 
 const ProjectCard = ({ project }: Props) => {
+  const t = useTranslations("Projects");
+
   const [currentImage, setCurrentImage] = useState(0);
 
   const totalImages = project.images.length;
@@ -31,7 +35,9 @@ const ProjectCard = ({ project }: Props) => {
         href={project.liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`View ${project.title} project`}
+        aria-label={t("actions.viewProject", {
+          title: project.title,
+        })}
         className="absolute inset-0 z-10 cursor-pointer rounded-2xl"
       />
 
@@ -39,7 +45,10 @@ const ProjectCard = ({ project }: Props) => {
       <div className="relative aspect-video shrink-0 overflow-hidden bg-white/5">
         <Image
           src={project.images[currentImage]}
-          alt={`${project.title} screenshot ${currentImage + 1}`}
+          alt={t("imageAlt", {
+            title: project.title,
+            number: currentImage + 1,
+          })}
           priority={currentImage === 0}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -52,7 +61,7 @@ const ProjectCard = ({ project }: Props) => {
             <button
               type="button"
               onClick={goToPrevious}
-              aria-label="Previous project image"
+              aria-label={t("actions.previousImage")}
               className="absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/50 text-white opacity-100 backdrop-blur-sm transition hover:bg-black/70 md:opacity-0 md:group-hover:opacity-100"
             >
               <FiChevronLeft className="text-lg" />
@@ -61,7 +70,7 @@ const ProjectCard = ({ project }: Props) => {
             <button
               type="button"
               onClick={goToNext}
-              aria-label="Next project image"
+              aria-label={t("actions.nextImage")}
               className="absolute right-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/50 text-white opacity-100 backdrop-blur-sm transition hover:bg-black/70 md:opacity-0 md:group-hover:opacity-100"
             >
               <FiChevronRight className="text-lg" />
@@ -88,29 +97,33 @@ const ProjectCard = ({ project }: Props) => {
 
         {/* Description */}
         <p className="mt-2 text-sm leading-6 text-gray-400">
-          {project.description}
+          {t(`projects.${project.id}.description`)}
         </p>
 
         {/* Highlights */}
         <div className="mt-2">
-          <h4 className="text-sm font-semibold text-white">Key Features</h4>
+          <h4 className="text-sm font-semibold text-white">
+            {t("labels.keyFeatures")}
+          </h4>
 
           <ul className="mt-2 space-y-1.5">
-            {project.highlights.slice(0, 2).map((highlight) => (
-              <li
-                key={highlight}
-                className="flex gap-2 text-sm leading-5 text-gray-400"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
-                <span>{highlight}</span>
-              </li>
-            ))}
+            {t.raw(`projects.${project.id}.highlights`)
+              .slice(0, 2)
+              .map((highlight: string) => (
+                <li
+                  key={highlight}
+                  className="flex gap-2 text-sm leading-5 text-gray-400"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
           </ul>
         </div>
 
         {/* Technologies */}
         <div className="mt-2">
-          <h4 className="text-sm font-semibold text-white">Technologies</h4>
+          <h4 className="text-sm font-semibold text-white">{t("labels.technologies")}</h4>
 
           <div className="mt-3 flex flex-wrap gap-2">
             {project.technologies.slice(0, 5).map((technology) => (
@@ -133,7 +146,7 @@ const ProjectCard = ({ project }: Props) => {
         {/* Live Demo */}
         <div className="mt-auto pt-4">
           <span className="inline-flex items-center gap-2 text-sm font-medium text-cyan-300">
-            Live Demo
+            {t("actions.liveDemo")}
             <FiExternalLink className="text-base" />
           </span>
         </div>

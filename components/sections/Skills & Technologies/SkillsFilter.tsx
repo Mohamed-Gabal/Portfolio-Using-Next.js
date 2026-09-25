@@ -1,8 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { skillCategories, SkillCategory } from "@/data/skills";
 
-type FilterCategory = "All Skills" | SkillCategory;
+type FilterCategory = "all" | SkillCategory;
 
 type Props = {
   activeCategory: FilterCategory;
@@ -13,18 +14,21 @@ const SkillsFilter = ({
   activeCategory,
   onCategoryChange,
 }: Props) => {
+  const t = useTranslations("Skills");
+
+
   return (
     <div className="mt-10 flex flex-wrap justify-center gap-3">
       <button
         type="button"
-        onClick={() => onCategoryChange("All Skills")}
+        onClick={() => onCategoryChange("all")}
         className={`rounded-full border px-5 py-2 text-sm font-medium transition-all duration-300 ${
-          activeCategory === "All Skills"
+          activeCategory === "all"
             ? "border-cyan-300/40 bg-cyan-300/15 text-cyan-200 shadow-lg shadow-cyan-950/20"
             : "border-white/10 bg-white/5 text-white hover:border-cyan-300/30 hover:bg-cyan-300/10"
         }`}
       >
-        All Skills
+        {t("filter.all")}
       </button>
 
       {skillCategories.map((category) => (
@@ -38,7 +42,7 @@ const SkillsFilter = ({
               : "border-white/10 bg-white/5 text-white hover:border-cyan-300/30 hover:bg-cyan-300/10"
           }`}
         >
-          {category}
+          {t(`categories.${category}`)}
         </button>
       ))}
     </div>

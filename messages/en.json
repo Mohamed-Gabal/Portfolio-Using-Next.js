@@ -1,0 +1,262 @@
+{
+  "Hero": {
+    "greeting": "Hi, I'm",
+    "name": "Mohamed Ali",
+    "role": "Frontend Developer",
+    "description": "I craft highly interactive, blazing fast, and stunningly designed web interfaces that elevate brand identities and delight users.",
+    "viewCv": "View My CV",
+    "linkedin": "LinkedIn Profile",
+    "exploreWork": "Explore My Work"
+  },
+
+  "About": {
+    "badge": "🚀 Professional Freelance Developer",
+    "title": "About",
+    "titleHighlight": "Me",
+    "description": "I'm a freelance frontend developer with 2+ years of experience building digital products for clients worldwide. I specialize in turning creative ideas into high-performance web applications.",
+    "ctaTitle": "Ready to bring your next project to life?",
+
+    "tags": {
+      "available": "Available for new projects",
+      "delivery": "1-2 weeks average delivery",
+      "consultation": "Free consultation call"
+    },
+
+    "services": {
+      "cleanCode": {
+        "name": "Clean & Scalable Code",
+        "description": "Writing maintainable, production-ready code following modern development practices and clean architecture principles."
+      },
+      "modernUI": {
+        "name": "Modern UI/UX Development",
+        "description": "Building responsive and user-friendly interfaces with attention to detail, accessibility, and smooth interactions."
+      },
+      "performance": {
+        "name": "Performance & Optimization",
+        "description": "Improving application performance through efficient rendering, optimized components, caching, and modern Next.js features."
+      },
+      "security": {
+        "name": "Secure Web Applications",
+        "description": "Implementing reliable authentication flows and following frontend security practices to build safer web applications."
+      }
+    }
+  },
+
+  "Skills": {
+    "badge": "🛠️ My Technical Toolbox",
+    "title": "Skills &",
+    "titleHighlight": "Technologies",
+    "description": "A curated collection of tools, frameworks, and programming languages I use to build premium digital products.",
+    "filter": {
+      "all": "All Skills"
+    },
+
+    "categories": {
+      "Framework": "Framework",
+      "State Management": "State Management",
+      "Language": "Language",
+      "Styling": "Styling",
+      "Animations": "Animations",
+      "Tools": "Tools"
+    },
+
+    "levels": {
+      "Expert": "Expert",
+      "Advanced": "Advanced",
+      "Intermediate": "Intermediate"
+    },
+
+    "features": {
+      "componentDesign": "Component Design",
+      "uiuxFocus": "UI/UX Focus",
+      "performance": "Performance",
+      "responsive": "Responsive"
+    }
+  },
+
+  "Projects": {
+    "badge": "💼 Selected Work",
+    "title": "Recent",
+    "titleHighlight": "Projects",
+    "description": "Discover a selection of recent freelance projects, case studies, and modern web applications built using advanced frontend tech.",
+
+    "filters": {
+      "all": "All Projects",
+      "Dashboards": "Dashboards",
+      "Ecommerce": "E-commerce",
+      "Featured": "Featured"
+    },
+
+    "labels": {
+      "keyFeatures": "Key Features",
+      "technologies": "Technologies"
+    },
+
+    "actions": {
+      "viewProject": "View {{title}} project",
+      "previousImage": "Previous project image",
+      "nextImage": "Next project image",
+      "liveDemo": "Live Demo"
+    },
+
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+
+    "projects": {
+      "1": {
+        "description": "A responsive E-commerce platform focused on product discovery, cart management, and a smooth shopping experience across all devices.",
+        "highlights": [
+          "Dynamic product catalog with organized product browsing and detailed product views.",
+          "Interactive shopping cart with real-time item and quantity management.",
+          "Responsive mobile-first interface optimized for different screen sizes.",
+          "Smooth page interactions and optimized loading experience.",
+          "Dark and light theme support."
+        ]
+      },
+
+      "2": {
+        "description": "A modern car rental web application designed to help users explore available vehicles and manage their rental experience through a responsive and interactive interface.",
+        "highlights": [
+          "Vehicle browsing and rental-focused user experience.",
+          "Responsive interface optimized for desktop, tablet, and mobile devices.",
+          "Interactive booking flow for selecting rental details.",
+          "Smooth user interactions and modern animated UI."
+        ]
+      },
+
+      "3": {
+        "description": "A modern E-commerce experience focused on product discovery, responsive layouts, interactive components, and smooth user interactions.",
+        "highlights": [
+          "Interactive product browsing and detailed product presentation.",
+          "Responsive E-commerce interface across desktop, tablet, and mobile.",
+          "Smooth UI interactions and animated content sections.",
+          "Optimized loading experience for a faster browsing flow.",
+          "Reusable frontend components for consistent UI development."
+        ]
+      },
+
+      "4": {
+        "description": "An E-commerce storefront focused on clean product presentation, responsive layouts, and an interactive shopping experience.",
+        "highlights": [
+          "Product catalog with structured product browsing.",
+          "Responsive storefront optimized for different devices.",
+          "Interactive shopping experience with reusable UI components.",
+          "Smooth navigation and frontend interactions."
+        ]
+      },
+
+      "5": {
+        "description": "A modern corporate landing page featuring structured content sections, responsive layouts, animated interactions, and a complete marketing-style experience.",
+        "highlights": [
+          "Animated sections and smooth content reveal while scrolling.",
+          "Responsive navigation and mobile-friendly layout.",
+          "Structured About, Services, Work Process, Portfolio, Blog, and Contact sections.",
+          "Interactive visual sections with images and content transitions.",
+          "Responsive design optimized across different screen sizes."
+        ]
+      },
+
+      "6": {
+        "description": "A full-featured project and task management system inspired by Jira, Trello, and ClickUp, with authentication, persistent sessions, responsive dashboards, and complete project workflows.",
+        "highlights": [
+          "Built a complete authentication system (sign-up and login) with forgot-password and reset-password flows.",
+          "Implemented \"Remember Me\" functionality alongside refresh-token handling to keep user sessions persistent and secure.",
+          "Sole frontend developer on a full-featured project and task management system (Jira/Trello/ClickUp-inspired), delivering 100% of the UI over a 2-month development cycle.",
+          "Responsive dashboard layout with sidebar navigation.",
+          "Delivered a fully responsive UI across mobile and desktop screens."
+        ]
+      },
+
+      "7": {
+        "description": "A modern administrative dashboard with authentication and management-focused interfaces built around a responsive dashboard experience.",
+        "highlights": [
+          "Built a Next.js and TypeScript dashboard application with authentication and roles/permissions.",
+          "Implemented REST API data fetching and caching with TanStack Query.",
+          "Added form validation using React Hook Form and Zod with reusable components.",
+          "Implemented dark/light mode and a responsive dashboard UI with a clean, maintainable structure.",
+          "Smooth interface interactions and loading experience."
+        ]
+      }
+    }
+  },
+
+  "Experience": {
+    "badge": "📈 Timeline & Growth",
+    "title": "Professional",
+    "titleHighlight": "Journey",
+    "description": "A timeline of my professional experience, freelance path, and continuous skill expansion.",
+
+    "items": {
+      "1": {
+        "title": "Frontend Developer Romoz Tech",
+        "subtitle": "Company Projects",
+        "date": "2025 - Present",
+        "description": "Worked on modern web applications using React.js, Next.js, and TypeScript. Built responsive interfaces, authentication flows, dashboards, and user-focused frontend features."
+      },
+
+      "2": {
+        "title": "Frontend Developer - Freelance",
+        "subtitle": "Freelance Project",
+        "date": "2024 (3 months)",
+        "description": "Developing modern web applications using React.js, Next.js, and TypeScript. Building responsive interfaces and focusing on user experience."
+      }
+    }
+  },
+
+  "Contact": {
+    "badge": "📩 Let's Connect",
+    "title": "Build Something",
+    "titleHighlight": "Great",
+    "description": "Have a project in mind, need a freelance developer, or just want to chat? Reach out to me via any of the channels below.",
+    "methods": {
+      "fastestResponse": "Fastest Response",
+      "instantChat": "Instant Chat",
+      "professionalNetwork": "Professional Network",
+      "viewMyWork": "View my work"
+    },
+    "info": {
+      "title": "Contact Information"
+    },
+    "details": {
+      "responseTime": "Response Time",
+      "location": "Location"
+    },
+    "stats": {
+      "1": "20+ Projects",
+      "2": "100% Satisfaction",
+      "3": "2+ Years Exp."
+    }
+  },
+
+  "Footer": {
+    "brand": {
+      "name": "Mohamed",
+      "description": "Crafting premium digital experiences with passion and code."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "items": {
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience",
+        "contact": "Contact"
+      }
+    },
+    "contact": {
+      "title": "Get In Touch"
+    },
+    "cta": {
+      "status": "Open for Projects",
+      "description": "Accepting freelance work",
+      "button": "Start a Project"
+    },
+    "bottom": {
+      "copyright": "© 2026 Mohamed Ali. All rights reserved. Crafted with",
+      "and": "and",
+      "builtWith": "Built With"
+    }
+  }
+}

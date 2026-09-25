@@ -1,31 +1,39 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaCode } from "react-icons/fa";
-
-import { siteConfig } from "@/config/site.config";
 import FooterCTA from "./FooterCTA";
-import { socialLinks, quickLinks, footerContactItems } from "@/data/footer";
+
+import {
+  socialLinks,
+  quickLinks,
+  footerContactItems,
+} from "@/data/footer";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
-    <footer className="bg-[#0f142e] border-t border-white/10">
-      <div className="w-full px-6 sm:px-20 py-12">
+    <footer className="border-t border-white/10 bg-[#0f142e]">
+      <div className="w-full px-6 py-12 sm:px-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <FaCode className="w-6 h-6 text-blue-500" />
+              <FaCode className="h-6 w-6 text-blue-500" />
+
               <span className="text-lg font-semibold text-white">
-                {siteConfig.brand} Ali
+                {t("brand.name")}
               </span>
             </div>
 
             <p className="mt-3 text-sm text-gray-400">
-              Crafting premium digital experiences with passion and code.
+              {t("brand.description")}
             </p>
 
             <div className="mt-5 flex gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
+
                 return (
                   <Link
                     key={social.id}
@@ -46,7 +54,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 text-base font-semibold text-white">
               <FaCode className="text-blue-500" />
-              Quick Links
+              {t("quickLinks.title")}
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
@@ -56,7 +64,7 @@ const Footer = () => {
                   href={link.href}
                   className="text-sm text-gray-400 transition hover:text-blue-400"
                 >
-                  {link.label}
+                  {t(`quickLinks.items.${link.label}`)}
                 </a>
               ))}
             </div>
@@ -64,11 +72,14 @@ const Footer = () => {
 
           {/* Get In Touch */}
           <div>
-            <h3 className="text-base font-semibold text-white">Get In Touch</h3>
+            <h3 className="text-base font-semibold text-white">
+              {t("contact.title")}
+            </h3>
 
             <div className="mt-4 flex flex-col gap-3">
               {footerContactItems.map((item) => {
                 const Icon = item.icon;
+
                 return (
                   <div
                     key={item.id}
@@ -83,21 +94,30 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Import FooterCTA Component */}
         <FooterCTA />
 
         {/* Footer Bottom */}
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-sm text-gray-400">
-            © 2026 Mohamed Ali. All rights reserved. Crafted with{" "}
-            <span className="text-red-400">❤️</span> and ☕
+            {t("bottom.copyright")}{" "}
+            <span className="text-red-400">❤️</span>{" "}
+            {t("bottom.and")} ☕
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-400">
-            Built With
-            <span className="rounded-md bg-slate-400/10 p-1.5 text-slate-200">Next.js</span>
-            <span className="rounded-md bg-blue-400/15 p-1.5 text-blue-200">TypeScript</span>
-            <span className="rounded-md bg-green-400/10 p-1.5 text-green-300">GSAP</span>
+            {t("bottom.builtWith")}
+
+            <span className="rounded-md bg-slate-400/10 p-1.5 text-slate-200">
+              Next.js
+            </span>
+
+            <span className="rounded-md bg-blue-400/15 p-1.5 text-blue-200">
+              TypeScript
+            </span>
+
+            <span className="rounded-md bg-green-400/10 p-1.5 text-green-300">
+              GSAP
+            </span>
           </div>
         </div>
       </div>

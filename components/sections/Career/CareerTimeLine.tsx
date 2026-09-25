@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import Badge from "@/components/ui/Badge";
 import Container from "@/components/layout/container";
 import CareerTimeLineItem from "./CareerTimeLineItem";
@@ -5,17 +7,20 @@ import CareerTimeLineItem from "./CareerTimeLineItem";
 import { careers } from "@/data/career";
 
 const CareerTimeLine = () => {
+  const t = useTranslations("Experience");
+
   return (
     <section id="experience" className="pt-16 pb-16">
       <Container>
         <Badge
-          badge="📈 Timeline & Growth"
+          badge={t("badge")}
           title={
             <>
-              Professional <span className="text-cyan-300">Journey</span>
+              {t("title")}{" "}
+              <span className="text-cyan-300">{t("titleHighlight")}</span>
             </>
           }
-          description="A timeline of my professional experience, freelance path, and continuous skill expansion."
+          description={t("description")}
         />
 
         {/* Timeline */}

@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
+
 type Props = {
   currentPage: number;
   totalPages: number;
@@ -11,6 +14,8 @@ const ProjectsPagination = ({
   totalPages,
   onPageChange,
 }: Props) => {
+   const t = useTranslations("Projects");
+
   return (
     <div className="mt-12 flex items-center justify-center gap-2">
       {/* Previous */}
@@ -20,7 +25,7 @@ const ProjectsPagination = ({
         disabled={currentPage === 1}
         className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-cyan-300/30 hover:bg-cyan-300/10 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Previous
+        {t("pagination.previous")}
       </button>
 
       {/* Pages */}
@@ -48,7 +53,7 @@ const ProjectsPagination = ({
         disabled={currentPage === totalPages}
         className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-cyan-300/30 hover:bg-cyan-300/10 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Next
+         {t("pagination.next")}
       </button>
     </div>
   );
