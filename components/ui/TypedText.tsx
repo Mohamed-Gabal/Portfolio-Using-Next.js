@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 type Props = {
   text: string;
-  speed?: number; // ms لكل حرف
-  start?: boolean; // يبدأ امتى (للتسلسل)
+  speed?: number; 
+  start?: boolean; 
   onDone?: () => void;
 };
 
@@ -20,13 +20,11 @@ export default function TypedText({
   const [prevText, setPrevText] = useState(text);
   const onDoneRef = useRef(onDone);
 
-  // لو النص اتغير (مثلاً تغيير اللغة) نبدأ الكتابة من الأول
   if (prevText !== text) {
     setPrevText(text);
     setCount(0);
   }
 
-  // تحديث الـ ref جوا effect مش وقت الـ render
   useEffect(() => {
     onDoneRef.current = onDone;
   });
