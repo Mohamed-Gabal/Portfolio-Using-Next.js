@@ -1,5 +1,205 @@
+// "use client";
+
+// import { useTranslations } from "next-intl";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import { motion } from "motion/react";
+// import { BsChevronDown } from "react-icons/bs";
+// import { siteConfig } from "@/config/site.config";
+// import Container from "@/components/layout/container";
+
+// const HeroPage = () => {
+//   const t = useTranslations("Hero");
+
+//   return (
+//     <div className="relative min-h-[100svh] overflow-hidden flex items-center">
+//       <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-30">
+//         {/* Left Content */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -40 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{
+//             duration: 0.8,
+//             ease: "easeOut",
+//           }}
+//           className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
+//         >
+//           <p className="text-lg sm:text-xl">{t("greeting")}</p>
+
+//           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wide mt-5">
+//             {t("name")}
+//           </h1>
+
+//           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cyan-300 font-extrabold mt-5">
+//             {t("role")}
+//           </h2>
+
+//           <p className="text-base sm:text-lg mt-6 leading-relaxed">
+//             {t("description")}
+//           </p>
+
+//           {/* Buttons */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{
+//               duration: 0.6,
+//               delay: 0.4,
+//             }}
+//             className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
+//           >
+//             <Link
+//               href={siteConfig.resumeUrl}
+//               target="_blank"
+//               className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
+//             >
+//               {t("viewCv")}
+//             </Link>
+
+//             <Link
+//               href={siteConfig.social.linkedIn}
+//               target="_blank"
+//               className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
+//             >
+//               {t("linkedin")}
+//             </Link>
+//           </motion.div>
+
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{
+//               duration: 0.6,
+//               delay: 0.55,
+//             }}
+//             className="mt-4 w-full sm:w-auto"
+//           >
+//             <Link
+//               href="#projects"
+//               className="px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
+//             >
+//               {t("exploreWork")}
+//               <BsChevronDown className="w-4 h-4" />
+//             </Link>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* Right Image */}
+//         <motion.div
+//           initial={{ opacity: 0, scale: 0.8 }}
+//           animate={{ opacity: 1, scale: 1 }}
+//           transition={{
+//             duration: 0.9,
+//             ease: "easeOut",
+//           }}
+//           className="relative flex items-center justify-center text-cyan-300 w-50 h-50 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+//         >
+//           {/* Outer Ring */}
+//           <motion.div
+//             animate={{
+//               rotate: 360,
+//             }}
+//             transition={{
+//               duration: 35,
+//               repeat: Infinity,
+//               ease: "linear",
+//             }}
+//             className="absolute inset-0 rounded-full border"
+//           />
+
+//           {/* Inner Ring */}
+//           <motion.div
+//             animate={{
+//               rotate: -360,
+//             }}
+//             transition={{
+//               duration: 45,
+//               repeat: Infinity,
+//               ease: "linear",
+//             }}
+//             className="absolute inset-6 rounded-full border"
+//           />
+
+//           {/* Floating Dot 1 */}
+//           <motion.span
+//             animate={{
+//               y: [0, -15, 0, 10, 0],
+//               x: [0, 5, 0, -5, 0],
+//               opacity: [0.5, 1, 0.7, 1, 0.5],
+//             }}
+//             transition={{
+//               duration: 4,
+//               repeat: Infinity,
+//               ease: "easeInOut",
+//             }}
+//             className="absolute -top-2 right-6 w-4 h-4 rounded-full bg-purple-500"
+//           />
+
+//           {/* Floating Dot 2 */}
+//           <motion.span
+//             animate={{
+//               y: [0, 10, 0, -12, 0],
+//               x: [0, -8, 0, 6, 0],
+//               opacity: [0.4, 1, 0.6, 1, 0.4],
+//             }}
+//             transition={{
+//               duration: 5,
+//               repeat: Infinity,
+//               ease: "easeInOut",
+//               delay: 0.5,
+//             }}
+//             className="absolute bottom-2 -left-4 w-3 h-3 rounded-full bg-blue-500"
+//           />
+
+//           {/* Floating Dot 3 */}
+//           <motion.span
+//             animate={{
+//               y: [0, -10, 0, 8, 0],
+//               opacity: [0.3, 1, 0.5, 1, 0.3],
+//               scale: [1, 1.2, 1, 0.9, 1],
+//             }}
+//             transition={{
+//               duration: 3.5,
+//               repeat: Infinity,
+//               ease: "easeInOut",
+//               delay: 1,
+//             }}
+//             className="absolute top-1/2 -right-5 w-3 h-3 rounded-full bg-cyan-400"
+//           />
+
+//           {/*  Profile Image */}
+//           <motion.div
+//             animate={{
+//               y: [-20, 20, -20],
+//             }}
+//             transition={{
+//               duration: 5,
+//               repeat: Infinity,
+//               ease: "easeInOut",
+//             }}
+//           >
+//             <Image
+//               src="/images/photo.jpeg"
+//               alt="Mohamed Ali - Frontend Developer"
+//               width={320}
+//               height={320}
+//               priority
+//               className="w-30 h-30 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full object-cover"
+//             />
+//           </motion.div>
+//         </motion.div>
+//       </Container>
+//     </div>
+//   );
+// };
+
+// export default HeroPage;
+
+
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
@@ -8,189 +208,204 @@ import { motion } from "motion/react";
 import { BsChevronDown } from "react-icons/bs";
 import { siteConfig } from "@/config/site.config";
 import Container from "@/components/layout/container";
+import TypedText from "@/components/ui/TypedText";
 
 const HeroPage = () => {
   const t = useTranslations("Hero");
-
+  const [step, setStep] = useState(0);
 
   return (
     <div className="relative min-h-[100svh] overflow-hidden flex items-center">
-        <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-30">
-          {/* Left Content */}
+      <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-6 py-30">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+          className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
+        >
+          <p className="text-lg sm:text-xl">{t("greeting")}</p>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wide mt-5">
+            <TypedText text={t("name")} speed={70} onDone={() => setStep(1)} />
+          </h1>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cyan-300 font-extrabold mt-5">
+            <TypedText
+              text={t("role")}
+              speed={50}
+              start={step >= 1}
+              onDone={() => setStep(2)}
+            />
+          </h2>
+
+          <p className="text-base sm:text-lg mt-6 leading-relaxed">
+            <TypedText
+              text={t("description")}
+              speed={18}
+              start={step >= 2}
+            />
+          </p>
+
+          {/* Buttons */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.8,
-              ease: "easeOut",
+              duration: 0.6,
+              delay: 0.4,
             }}
-            className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl"
+            className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
           >
-            <p className="text-lg sm:text-xl">{t("greeting")}</p>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wide mt-5">
-              {t("name")}
-            </h1>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cyan-300 font-extrabold mt-5">
-              {t("role")}
-            </h2>
-
-            <p className="text-base sm:text-lg mt-6 leading-relaxed">
-              {t("description")}
-            </p>
-
-            {/* Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.4,
-              }}
-              className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
+            <Link
+              href={siteConfig.resumeUrl}
+              target="_blank"
+              className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
             >
-              <Link
-                href={siteConfig.resumeUrl}
-                target="_blank"
-                className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
-              >
-                {t("viewCv")}
-              </Link>
+              {t("viewCv")}
+            </Link>
 
-              <Link
-                href={siteConfig.social.linkedIn}
-                target="_blank"
-                className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
-              >
-                {t("linkedin")}
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.55,
-              }}
-              className="mt-4 w-full sm:w-auto"
+            <Link
+              href={siteConfig.social.linkedIn}
+              target="_blank"
+              className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
             >
-              <Link
-                href="#projects"
-                className="px-8 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
-              >
-                {t("exploreWork")}
-                <BsChevronDown className="w-4 h-4" />
-              </Link>
-            </motion.div>
+              {t("linkedin")}
+            </Link>
           </motion.div>
 
-          {/* Right Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.9,
-              ease: "easeOut",
+              duration: 0.6,
+              delay: 0.55,
             }}
-            className="relative flex items-center justify-center text-cyan-300 w-50 h-50 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+            className="mt-4 w-full sm:w-auto"
           >
-            {/* Outer Ring */}
-            <motion.div
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute inset-0 rounded-full border"
-            />
-
-            {/* Inner Ring */}
-            <motion.div
-              animate={{
-                rotate: -360,
-              }}
-              transition={{
-                duration: 45,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute inset-6 rounded-full border"
-            />
-
-            {/* Floating Dot 1 */}
-            <motion.span
-              animate={{
-                y: [0, -15, 0, 10, 0],
-                x: [0, 5, 0, -5, 0],
-                opacity: [0.5, 1, 0.7, 1, 0.5],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute -top-2 right-6 w-4 h-4 rounded-full bg-purple-500"
-            />
-
-            {/* Floating Dot 2 */}
-            <motion.span
-              animate={{
-                y: [0, 10, 0, -12, 0],
-                x: [0, -8, 0, 6, 0],
-                opacity: [0.4, 1, 0.6, 1, 0.4],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-              className="absolute bottom-2 -left-4 w-3 h-3 rounded-full bg-blue-500"
-            />
-
-            {/* Floating Dot 3 */}
-            <motion.span
-              animate={{
-                y: [0, -10, 0, 8, 0],
-                opacity: [0.3, 1, 0.5, 1, 0.3],
-                scale: [1, 1.2, 1, 0.9, 1],
-              }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-              }}
-              className="absolute top-1/2 -right-5 w-3 h-3 rounded-full bg-cyan-400"
-            />
-
-            {/*  Profile Image */}
-            <motion.div
-              animate={{
-                y: [-20, 20, -20],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+            <Link
+              href="#projects"
+              className="px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 bg-blue-800 hover:scale-105 focus:outline-none focus:ring-2 transition-all duration-300"
             >
-              <Image
-                src="/images/photo.jpeg"
-                alt="Mohamed Ali - Frontend Developer"
-                width={320}
-                height={320}
-                priority
-                className="w-30 h-30 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full object-cover"
-              />
-            </motion.div>
+              {t("exploreWork")}
+              <BsChevronDown className="w-4 h-4" />
+            </Link>
           </motion.div>
-        </Container>
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut",
+          }}
+          className="relative flex items-center justify-center text-cyan-300 w-50 h-50 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+        >
+          {/* Outer Ring */}
+          <motion.div
+            animate={{
+              rotate: 360,
+            }}
+            transition={{
+              duration: 35,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute inset-0 rounded-full border"
+          />
+
+          {/* Inner Ring */}
+          <motion.div
+            animate={{
+              rotate: -360,
+            }}
+            transition={{
+              duration: 45,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute inset-6 rounded-full border"
+          />
+
+          {/* Floating Dot 1 */}
+          <motion.span
+            animate={{
+              y: [0, -15, 0, 10, 0],
+              x: [0, 5, 0, -5, 0],
+              opacity: [0.5, 1, 0.7, 1, 0.5],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute -top-2 right-6 w-4 h-4 rounded-full bg-purple-500"
+          />
+
+          {/* Floating Dot 2 */}
+          <motion.span
+            animate={{
+              y: [0, 10, 0, -12, 0],
+              x: [0, -8, 0, 6, 0],
+              opacity: [0.4, 1, 0.6, 1, 0.4],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+            className="absolute bottom-2 -left-4 w-3 h-3 rounded-full bg-blue-500"
+          />
+
+          {/* Floating Dot 3 */}
+          <motion.span
+            animate={{
+              y: [0, -10, 0, 8, 0],
+              opacity: [0.3, 1, 0.5, 1, 0.3],
+              scale: [1, 1.2, 1, 0.9, 1],
+            }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="absolute top-1/2 -right-5 w-3 h-3 rounded-full bg-cyan-400"
+          />
+
+          {/*  Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6, y: -20, filter: "blur(12px)" }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              filter: "blur(0px)",
+              y: [-20, 20, -20],
+            }}
+            transition={{
+              opacity: { duration: 1, delay: 0.4 },
+              scale: { duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] },
+              filter: { duration: 1, delay: 0.4 },
+              y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+            }}
+          >
+            <Image
+              src="/images/photo.jpeg"
+              alt="Mohamed Ali - Frontend Developer"
+              width={320}
+              height={320}
+              priority
+              className="w-30 h-30 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full object-cover"
+            />
+          </motion.div>
+        </motion.div>
+      </Container>
     </div>
   );
 };

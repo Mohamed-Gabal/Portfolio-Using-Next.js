@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import ScrollTop from "@/components/layout/ScrollTop";
 import { siteConfig } from "@/config/site.config";
 import Nav from "@/components/layout/Navbar/Nav";
 
@@ -49,7 +48,6 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Nav />
           {children}
-          <ScrollTop />
         </NextIntlClientProvider>
       </body>
     </html>

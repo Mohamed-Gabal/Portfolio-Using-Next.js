@@ -92,8 +92,10 @@
       "technologies": "Technologies"
     },
 
+    "imageAlt": "{title} project preview image {number}",
+
     "actions": {
-      "viewProject": "View {{title}} project",
+      "viewProject": "View {title} project",
       "previousImage": "Previous project image",
       "nextImage": "Next project image",
       "liveDemo": "Live Demo"
@@ -258,5 +260,14 @@
       "and": "and",
       "builtWith": "Built With"
     }
+  },
+
+  "FloatingContact": {
+    "toggle": "Contact options",
+    "whatsapp": { "title": "WhatsApp", "desc": "Quick chat" },
+    "call": { "title": "Call", "desc": "Direct call" },
+    "email": { "title": "Email", "desc": "Send email" },
+    "linkedin": { "title": "LinkedIn", "desc": "Connect" },
+    "github": { "title": "GitHub", "desc": "View work" }
   }
 }

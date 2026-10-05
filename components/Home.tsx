@@ -7,19 +7,36 @@ import Projects from "@/components/sections/Projects/Projects";
 import CareerTimeline from "./sections/Career/CareerTimeLine";
 import Contact from "@/components/sections/Contact/Contact";
 import Footer from "@/components/layout/Footer/Footer";
+import Reveal from "@/components/ui/Reveal";
+import FloatingContact from "./ui/FloatingContact";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <TechMarquee />
-      <About />
-      <HeaderSkills />
-      <Projects />
+      <Reveal>
+        <TechMarquee />
+      </Reveal>
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <HeaderSkills />
+      </Reveal>
+      <Reveal>
+        <Projects />
+      </Reveal>
       {/* <ProjectFeedback /> */}
-      <CareerTimeline />
-       <Contact />
-      <Footer />
+      <Reveal>
+        <CareerTimeline />
+      </Reveal>
+      <Reveal>
+        <Contact />
+      </Reveal>
+      <Reveal>
+        <Footer />
+      </Reveal>
+      <FloatingContact />
     </>
   );
 };

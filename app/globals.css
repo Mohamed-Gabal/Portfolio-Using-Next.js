@@ -11,3 +11,18 @@
 .animate-marquee {
   animation: marquee 8s linear infinite;
 }
+
+@theme {
+  --animate-ripple: ripple 2.4s ease-out infinite;
+
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(2.3);
+      opacity: 0;
+    }
+  }
+}
